@@ -1,0 +1,83 @@
+
+.create {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 100px;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h1 {
+  color: #6d352a;
+  margin-bottom: 30px;
+}
+.create .input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #6d352a;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #6d352a;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button{
+  font-size: small;
+
+}
+.ingredient{
+  display: flex;
+  align-items: center;
+}
+.ingredient button{
+max-height:38px ;
+font-size: small;
+margin-left: 20px;
+width: 150px;
+margin-top: 0;
+width: 300px;
+/* height: 50px; */
+}
+li{
+  text-align: left;
+}
+.label{
+  box-sizing: border-box;
+font-size: large;
+border-color: #6d352a;
+color: #6d352a;
+font-weight:bold ;
+}
+.picture{
+  margin-top: 30px;
+  color: #6d352a;
+font-weight:bold ;
+}
+select{
+  font-size: large;
+}
+.picture{
+font-size: large;
+}
+textarea{
+  font-size: large;
+}
+.sendrecipe{
+  margin-top: 20px;
+  height:40px ;
+font-size: small;
+width: 80px;
+margin-top: 80 auto;
+width: 200px;
+display: block;
+}

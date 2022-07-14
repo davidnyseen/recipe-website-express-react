@@ -1,0 +1,12 @@
+.container-recipes {
+    margin: 0 auto;
+    max-width: 1200;
+    background-color: #f1efe9;
+  }
+  .recipe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: stretch;
+    color: rgb(13, 49, 82);
+}

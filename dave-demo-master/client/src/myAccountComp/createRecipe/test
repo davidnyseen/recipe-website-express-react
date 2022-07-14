@@ -1,0 +1,195 @@
+import { useEffect, useState } from "react";
+import './createRecipe.css'
+import { useForm } from "react-hook-form";
+import FileUploader from '../../components/fileUploader/FileUploader';
+import UseProtectedFetch from '../../customHooks/UseProtectedFetch'
+import { useDispatch, useSelector } from "react-redux";
+
+
+
+const CreateRecipe = () => {
+  const [imgUrl, setImgUrl] = useState()
+  const [file, setFile] = useState();
+  const [imagsFromServer, setImagsFromServer] = useState([]);
+  const [recipename, setname] = useState('');
+  const [ingredient, setIngredient] = useState('');
+  const [ingredients, setIngredients] = useState([]);
+  const [mealType, setmealType] = useState('breakfest');
+  const [cuisineType, setCuisineType] = useState("American");
+  const [directions, setdirections] = useState(' ');
+  const [preprationtime, setpreprationtime] = useState('0.5');
+  const formData = new FormData();
+  UseProtectedFetch(); // this is a protected route
+
+  const { login } = useSelector((state) => state.login);
+
+  console.log(login);
+
+  const [login2, setLogin] = useState(useSelector((state) => state.login));
+
+  useEffect(() => {
+    console.log('url  :' + imgUrl)
+    if(imgUrl){
+      const value = JSON.stringify({
+        recipename, ingredients, imgUrl,
+        mealType, cuisineType, directions, preprationtime, login
+      });
+
+      fetch('/submitNewRecipe', {
+        method: 'post',
+        credentials: 'include',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: value,
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Your recipe has been successfully submitted");
+            return response.json();
+          } else {
+            throw new Error('Something went wrong submitNewRecipe');
+          }
+        })
+        .catch((error) => {
+          alert("oops, there was an error when submitting the recipe");
+          console.log(error)
+        });
+    }
+  }, [imgUrl])
+  async function handleSubmit(e) {
+    e.preventDefault();
+    formData.append('image', file);
+    
+    const url = await  fetch('/submitNewImage', {
+      method: 'post',
+      credentials: 'include',
+      headers: {
+        'Accept': 'application/json',
+      },
+      body: formData,
+    })
+      .then(res => res.json())
+     .then(res => {
+      setImagsFromServer([res.imagePath, ...imagsFromServer])
+      return(res.imagePath);
+     })
+     setImgUrl(url);
+
+
+
+
+
+  }
+  function addingredient() {
+    setIngredients(ingr => [...ingr, ingredient])
+  }
+  const fileSelected = event => {
+    const file = event.target.files[0]
+    setFile(file);
+  }
+  
+
+  //ADDED SINCE 19/05/2022
+
+
+
+
+  return (
+    <div className="create">
+      <h1>Add a New Recipe</h1>
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <label className="label">Recipe name:</label>
+        <input 
+          className="input"
+          type="text"
+          required
+          value={recipename}
+          onChange={(e) => setname(e.target.value)}
+        />
+
+        <label className="label">preparation time:</label>
+        <select
+          value={preprationtime}
+          onChange={(e) => setpreprationtime(e.target.value)}
+        >
+          <option value="0.5">half an hour</option>
+          <option value="1">1 hour</option>
+          <option value="1.5">1.5 hours</option>
+          <option value="2">2 hours</option>
+          <option value="2.5">2.5 hours</option>
+
+
+        </select>
+        <ol>{ingredients && ingredients.map(
+          (ingr, i) => (
+            <li key={i}>{ingr}</li>
+          ))}
+        </ol>
+        <label className="label">ingredients:</label>
+        <div className="ingredient">
+          <input
+            className="input" 
+            value={ingredient}
+            onChange={(e) => setIngredient(e.target.value)}
+          ></input>
+          <button type="button" onClick={addingredient}>add ingredient</button>
+        </div>
+
+
+        <label className="label">mealType:</label>
+        <select
+          value={mealType}
+          onChange={(e) => setmealType(e.target.value)}
+        >
+          <option value="breakfest">breakfest</option>
+          <option value="lunch">lunch</option>
+          <option value="dinner">dinner</option>
+
+        </select>
+
+        <label className="label">Cuisine type:</label>
+        <select
+          value={cuisineType}
+          onChange={(e) => setCuisineType(e.target.value)}
+        >
+          <option value="American">American</option>
+          <option value="Italian">Italian</option>
+          <option value="Asian">Asian</option>
+          <option value="Mexican">Mexican</option>
+          <option value="French">French</option>
+          <option value="Indian">Indian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Greek">Greek</option>
+          <option value="English">English</option>
+          <option value="Spanish">Spanish</option>
+          <option value="Thai">Thai</option>
+          <option value="German">German</option>
+          <option value="Moroccan">Moroccan</option>
+          <option value="Irish">Irish</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Israeli">Israeli</option>
+        </select>
+        {/* add directions */}
+        <label className="label" style={{ marginTop: "30px" }}>add directions:</label>
+        <textarea rows="5" cols="50" name="comment" form="usrform"
+          value={directions} placeholder="pizza"
+          onChange={(e) => setdirections(e.target.value)}>
+        </textarea>
+
+        <label className="picture" >upload a picture of your recipe:</label>
+
+        <input onChange={fileSelected} type="file"
+          multiple="multiple"
+          className="picture"
+          id="picture" name="picture" accept="image/*"></input>
+
+        <button className="sendrecipe">Add Recipe</button>
+      </form>
+
+    </div>
+  );
+}
+
+export default CreateRecipe;
