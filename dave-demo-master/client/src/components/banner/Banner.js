@@ -11,6 +11,7 @@ export default function App() {
   const { login } = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
+  // logout
   async function  handlelogout(e){
     try {
       const res = await fetch('/logout')

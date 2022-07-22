@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { loginValue } from "../store/loginReducer";
 
 
 const UseProtectedFetch = () => {
+    const dispatch = useDispatch();
     let navigate = useNavigate(); // like href
     const { login } = useSelector((state) => state.login);
     useEffect(() => {
-        if (!login.user) {
-            navigate('/');
-        }
+        // I logged out these lines thet are not logiclly correct.
+        // if (!login.user) {
+        //     navigate('/');
+        // }
 
         func();
     }, [])
@@ -24,6 +27,8 @@ const UseProtectedFetch = () => {
                     return false;
                 }
                 else{
+                    // jwt authorized
+                    dispatch(loginValue({user : " "}));
                     return true;
                 }
             }

@@ -42,8 +42,6 @@ const CreateRecipe = () => {
     })
     .then(res => res.json())
     .then(res => {
-        console.log("???????????????????")
-        console.log(res)
       
       
     })

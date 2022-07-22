@@ -30,7 +30,11 @@ sharp(file).resize({height:300,width:300}).toFile(outputImage)
 }
 
 module.exports.submitNewImage_post = async (req, res) => {
-  try{const file = req.file;
+  try{
+    if(!req.file){
+      throw new Error('image is required');
+    }
+    const file = req.file;
   // convert(file.originalname);
   // console.log(file)
   // convert(file);
@@ -44,7 +48,10 @@ module.exports.submitNewImage_post = async (req, res) => {
   res.send({imagePath: `/getImage/${result.Key}`}).status(201);
 }
   catch(err){
-console.log(err);
+    console.log("err submitNewImage_post ");
+    console.log(err);
+    res.send({error:err}).status(404)
+
   }
   
 }
