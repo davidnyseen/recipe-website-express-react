@@ -43,11 +43,12 @@ const CategoryType = () => {
     function getCategory(cat, func) {
         fetchPost('/getCategory', cat)
             .then(res => res.json())
-            .then((res) => (
+            .then((res) => {
                 //console.log(res);
                 //setTest(res.result)
-                func(res.result)
-            ))
+                if(res)
+                    func(res.result)
+            })
             .catch(err => (console.log("error getting recipes in home. err msg: " + err.message)))
     }
 

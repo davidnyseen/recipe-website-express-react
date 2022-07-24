@@ -13,6 +13,8 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import CategoryType from "../pages/categories/CategoryType";
 import fetchPost from "../utils/fetchPost";
+import Footer from "../components/footer/footer";
+
 
 export default function App() {
 
@@ -36,6 +38,8 @@ return (
 
 
     </Routes>
+    <Footer></Footer>
+
     </BrowserRouter>
    
     </div>

@@ -70,10 +70,6 @@ const SavedRecipes = () => {
 
     return (
         <div className="myuploads">
-            <div className="username">{login.user && <h2>welcome {login.user}</h2>}</div>
-            <h1>My saved recipes</h1>
-            <div><h2>saved recipes</h2>
-            </div>
             <div className="container-recipes">
 
                 <div className="recipe">

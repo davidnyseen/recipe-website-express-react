@@ -32,12 +32,12 @@ const MyAccount = () => {
 
     return (
         <div>
-            <nav className="main-nav">
+            <nav className="profile-nav">
                 <ul>
                     <li className={myRecipes ? " currentBtn lili" : "lili"}
-                     onClick={()=>setuploads()}>my uploads</li>
+                     onClick={()=>setuploads()}>My uploads</li>
                     <li className={mysavedRecipes ? " currentBtn lili" : "lili"}
-                    onClick={()=>setsaved()}>saved recipes</li>
+                    onClick={()=>setsaved()}>Liked recipes</li>
         
                 </ul>
             </nav>

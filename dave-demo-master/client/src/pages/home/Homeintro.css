@@ -1,0 +1,138 @@
+
+
+.intro-container h1 {
+    font-size: 350%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.intro-container p {
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.intro-container .alotofrecipes {
+    background-color: #f5f3ee;
+    height: 700px;
+}
+
+.details {
+    margin: auto;
+    max-width: 1300px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.alot-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+
+}
+
+.intro-container img {
+    border-radius: 4px;
+}
+
+.big {
+    flex: 1;
+    margin-right: 13px;
+    max-width: 865px;
+
+}
+
+.smalls {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+}
+
+.one {
+    width: 425px;
+    margin-bottom: 5px;
+}
+
+.two {
+    width: 425px;
+    margin-top: 5px;
+
+}
+
+
+.intro-container .differentcategories {
+    margin-bottom: 50px;
+
+}
+
+.intro-container .differentcategories .diffcat-img {
+    display: flex;
+}
+
+.intro-container .differentcategories .diffcat-img img {
+    max-height: 616px;
+    margin-top: 50px;
+
+}
+
+.space {
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+
+
+.intro-container .shareyourrecipe {
+    background-color: rgba(23, 29, 47, 1);
+    height: 470px;
+    color: white;
+
+}
+
+.intro-container .shareyourrecipe .details .share-desc {
+    margin-top: 90px;
+    float: right;
+    text-align: left;
+    max-width: 400px;
+}
+
+.intro-container .shareyourrecipe .details .share-desc h1 {
+    line-height: 50px;
+    margin-bottom: 50px;
+
+}
+
+.intro-container .shareyourrecipe .details .share-desc p {
+    text-align: justify;
+
+}
+
+.intro-container .shareyourrecipe .share-img img {
+    max-width: 700px;
+    margin-top: 50px;
+    margin-right: 200px;
+    border: solid 2px white;
+
+}
+
+.abouttheproject .details {
+    background-color: red;
+    max-width: 1600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+
+}
+
+.abouttheproject .details p {
+    max-width: 1200px;
+    margin: auto;
+}

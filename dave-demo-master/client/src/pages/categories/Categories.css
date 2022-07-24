@@ -1,80 +1,82 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  /* Create three equal columns that floats next to each other */
-  .column1 {
-    float: left;
-    width: 33.33%;
-    height: 100vh; /* Should be removed. Only for demonstration */
-    background-color: #aaa;
-    background-image: url("https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/59/3d/9d/french-breakfast.jpg");
-    background-size: cover;
-    transition: transform .2s;
-    /*border-style: solid;*/
-    border-radius: 8px;
+  box-sizing: border-box;
+}
 
-  }
+/* Create three equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 33.33%;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  background-color: #aaa;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/59/3d/9d/french-breakfast.jpg");
+  background-size: cover;
+  transition: transform .2s;
+  /*border-style: solid;*/
+  border-radius: 8px;
 
-  .column1:hover {
-    /*transform: scale(1.05);*/
-    transform: translateY(-1.250rem);
-    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
+}
 
-  }
+.column1:hover {
+  /*transform: scale(1.05);*/
+  transform: translateY(-1.250rem);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
 
-  .column2 {
-    float: left;
-    width: 33.33%;
-    height: 100vh; /* Should be removed. Only for demonstration */
-    background-color: #bbb;
-    background-image: url("https://images.pexels.com/photos/33162/food-restaurant-menu-asia.jpg?cs=srgb&dl=pexels-pixabay-33162.jpg&fm=jpg");
-    background-size: cover;
-    transition: transform .2s;
-    /*border-style: solid;*/
-    border-radius: 8px;
+}
 
-  }
+.column2 {
+  float: left;
+  width: 33.33%;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  background-color: #bbb;
+  background-image: url("https://images.pexels.com/photos/33162/food-restaurant-menu-asia.jpg?cs=srgb&dl=pexels-pixabay-33162.jpg&fm=jpg");
+  background-size: cover;
+  transition: transform .2s;
+  /*border-style: solid;*/
+  border-radius: 8px;
 
-  .column2:hover {
-    /*transform: scale(1.05);*/
-    transform: translateY(-1.250rem);
-    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
+}
 
-  }
+.column2:hover {
+  /*transform: scale(1.05);*/
+  transform: translateY(-1.250rem);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
 
-  .column3 {
-    float: left;
-    width: 33.33%;
-    height: 100vh; /* Should be removed. Only for demonstration */
-    background-color: #ccc;
-    transition: transform .2s;
-    /*border-style: solid;*/
-    background-image: url("https://images.unsplash.com/photo-1463183547458-6a2c760d0912?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687");
-    background-size: cover;
-    border-radius: 8px;
-  }
+}
 
-  .column3:hover {
-    /*transform: scale(1.05);*/
-    transform: translateY(-1.250rem);
-    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
+.column3 {
+  float: left;
+  width: 33.33%;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  background-color: #ccc;
+  transition: transform .2s;
+  /*border-style: solid;*/
+  background-image: url("https://images.unsplash.com/photo-1463183547458-6a2c760d0912?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687");
+  background-size: cover;
+  border-radius: 8px;
+}
 
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.column3:hover {
+  /*transform: scale(1.05);*/
+  transform: translateY(-1.250rem);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
 
-  .Categories h1 {
-    background-image: linear-gradient(to bottom, #fff, #fae2b5);
-    box-shadow: 0px 15px 22px -15px black;    
-    text-align: center;
-    height: 80px;
-    margin: 0;
-    padding: 10px;
-    border-radius: 8px;
-  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Categories {
+  margin-top: 20px;
+}
+
+.Categories h1 {
+  background-image: linear-gradient(to bottom, #fff, #fae2b5);
+  text-align: center;
+  height: 80px;
+  margin: 0;
+  padding: 10px;
+}

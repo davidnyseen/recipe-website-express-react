@@ -1,596 +1,1879 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
-
-@media only screen and (max-width: 1200px), screen and (max-height: 1200px) {
-    /*.single-recipe {
-        
-        max-width: 1200px;
-        margin: auto;
-        margin-top: 60px;
-        margin-bottom: 100px;
-        font-size: 90%;
-        font-family: 'Rubik', sans-serif;
-    }*/
-    
-    .single-recipe .mainIMG {
-        border-radius: 8px;
-       /* float: right;*/
-        width: 200px;
-        height: 200px;
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
-
-    }
-
-   /* .single-recipe .logo {
-        border: 3px solid gold;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: black;
-    }
-    
-    .single-recipe .top-part {
-        text-align: left;
-        height: 600px;
-    }
-    
-    .single-recipe .top-part .rating{
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        margin-top: 45px;
-        margin-bottom: 45px;
-    }
-    
-    .single-recipe .informations {
-        line-height: 50px;
-        width: 800px;
-        margin: auto;
-        max-height: 400px;
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
-    }
-    
-    .single-recipe .recipeLabel {
-        font-size: 300%;
-        
-    }
-
-    .single-recipe .informations .recipeAuthor{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .type{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .mealType{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .prepTime{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .ingredients{
-        padding: 15px;
-    }
-    
-    .single-recipe .ingredientsDetails {
-        clear: both;
-        margin: auto;
-        text-align: left;
-    }
-    
-    .single-recipe .main-bar {
-        width: 1200px;
-        margin-bottom: 60px;
-    }
-    
-    .single-recipe .little-bar {
-        width: 550px;
-    }
-    
-    .single-recipe .globalInfo {
-        clear: both;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 50px;
-        background-color: beige;
-        border-radius: 8px;
-    }
-    .single-recipe .globalInfo .column {
-        margin-right: 10px;
-    }*/
-
-    .single-recipe .ratingsAndComments {
-        text-align: left;
-    }
-
-    .single-recipe .ratingsAndComments .usrReaction .usrRating {
-        margin-left: 20px;
-
-    }
-
-
-}
-
-@media only screen and (min-width: 720px) {
+@media screen and (min-width: 2500px) {
     .single-recipe {
-        
-        max-width: 1200px;
-        margin: auto;
-        margin-top: 60px;
-        margin-bottom: 100px;
-        font-size: 90%;
-        font-family: 'Rubik', sans-serif;
-    }
-    
-    .single-recipe .mainIMG {
-        border-radius: 8px;
-        float: right;
-        width: 400px;
-        height: 400px;
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
-
-    }
-
-    .single-recipe .logo {
-        border: 3px solid gold;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: black;
-    }
-    
-    .single-recipe .top-part {
-        text-align: left;
-        height: 600px;
-    }
-    
-    .single-recipe .top-part .rating{
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        margin-top: 45px;
-        margin-bottom: 45px;
-    }
-    
-    .single-recipe .informations {
-        line-height: 50px;
-        width: 800px;
-        margin: auto;
-        max-height: 400px;
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
-    }
-    
-    .single-recipe .recipeLabel {
-        font-size: 300%;
-        
-    }
-
-    .single-recipe .informations .recipeAuthor{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .type{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .mealType{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .prepTime{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .ingredients{
-        padding: 15px;
-    }
-    
-    .single-recipe .ingredientsDetails {
-        clear: both;
-        margin: auto;
-        text-align: left;
-    }
-    
-    .single-recipe .main-bar {
-        width: 1200px;
-        margin-bottom: 60px;
-    }
-    
-    .single-recipe .little-bar {
-        width: 550px;
-    }
-    
-    .single-recipe .globalInfo .column {
-        margin-right: 10px;
-    }
-}
-
-
-@media only screen and (min-width: 1920px) {
-    .single-recipe {
-        
-        max-width: 1400px;
-        margin: auto;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        font-size: 100%;
-        font-family: 'Rubik', sans-serif;
-    }
-    
-    .single-recipe .mainIMG {
-        border-radius: 8px;
-        float: right;
-        width: 500px;
-        height: 500px;
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
-
-    }
-
-    .single-recipe .logo {
-        border: 3px solid gold;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: black;
-    }
-    
-    .single-recipe .top-part {
-        text-align: left;
-        height: 600px;
-    }
-    
-    .single-recipe .top-part .rating{
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        margin-top: 45px;
-        margin-bottom: 45px;
-    }
-    
-    .single-recipe .informations {
-        line-height: 50px;
-        width: 800px;
-        margin: auto;
-        max-height: 400px;
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
-    }
-    
-    .single-recipe .recipeLabel {
-        font-size: 300%;
-        
-    }
-
-    .single-recipe .informations .recipeAuthor{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .type{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .mealType{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .prepTime{
-        padding: 15px;
-    }
-    
-    .single-recipe .informations .ingredients{
-        padding: 15px;
-    }
-    
-    .single-recipe .ingredientsDetails {
-        clear: both;
-        margin: auto;
-        text-align: left;
-    }
-    
-    .single-recipe .main-bar {
-        width: 1400px;
-        margin-bottom: 60px;
-    }
-    
-    .single-recipe .little-bar {
-        width: 550px;
-    }
-    
-
-    .single-recipe .globalInfo .column {
-        margin-right: 10px;
-    }
-
-    .single-recipe .ratingsAndComments {
-        text-align: left;
-    }
-
-    .single-recipe .ratingsAndComments .usrReaction .usrRating {
-        margin-left: 20px;
-
-    }
-}
-
-
-@media only screen and (min-width: 2560px) {
-    .single-recipe {
-        
+        color: white;
         max-width: 1400px;
         margin: auto;
         margin-top: 100px;
         margin-bottom: 100px;
         font-size: 130%;
         font-family: 'Rubik', sans-serif;
-    }
-    
-    .single-recipe .mainIMG {
-        border-radius: 8px;
-        float: right;
-        width: 500px;
-        height: 500px;
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
 
     }
 
-    .single-recipe .logo {
-        border: 3px solid gold;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: black;
-    }
-    
-    .single-recipe .top-part {
+
+    .left {
         text-align: left;
-        height: 600px;
     }
-    
-    .single-recipe .top-part .rating{
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        margin-top: 45px;
-        margin-bottom: 45px;
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
     }
-    
-    .single-recipe .informations {
-        line-height: 50px;
-        width: 800px;
-        margin: auto;
-        max-height: 400px;
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
+
+    .left .top-part .rating {
+        color: #fabf84;
     }
-    
-    .single-recipe .recipeLabel {
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
         font-size: 300%;
-        
+
     }
 
-    .single-recipe .informations .recipeAuthor{
-        padding: 15px;
+    .left .top-part .rating {
+        margin-top: 50px;
     }
-    
-    .single-recipe .informations .type{
-        padding: 15px;
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 750px;
+        width: 600px;
+        height: 350px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
     }
-    
-    .single-recipe .informations .mealType{
-        padding: 15px;
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
     }
-    
-    .single-recipe .informations .prepTime{
-        padding: 15px;
+
+    .right::-webkit-scrollbar {
+        display: none;
     }
-    
-    .single-recipe .informations .ingredients{
-        padding: 15px;
+
+    .right .icons-response {
+        text-align: center;
     }
-    
-    .single-recipe .ingredientsDetails {
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        min-height: 60px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
         clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2500px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
         margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
         text-align: left;
     }
-    
-    .single-recipe .main-bar {
-        width: 1400px;
-        margin-bottom: 60px;
-    }
-    
-    .single-recipe .little-bar {
-        width: 550px;
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
     }
 
-    .single-recipe .globalInfo .column {
-        margin-right: 10px;
+    .left .top-part .rating {
+        color: #fabf84;
     }
-}
-/*
-.single-recipe {
-        
-    max-width: 1400px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 130%;
-    font-family: 'Rubik', sans-serif;
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 750px;
+        width: 575px;
+        height: 350px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
 }
 
-.single-recipe .mainIMG {
-    border-radius: 8px;
-    float: right;
-    width: 500px;
-    height: 500px;
+
+/*-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+
+@media screen and (min-width: 2350px) and (max-width: 2450px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 700px;
+        width: 575px;
+        height: 350px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
 }
 
-.single-recipe .logo {
-    border: 3px solid gold;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: black;
+/*----------------------------------------------------
+----------------------------------------------------*/
+
+@media screen and (min-width: 2150px) and (max-width: 2350px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+        margin-left: 75px;
+
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 660px;
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
 }
 
-.single-recipe .top-part {
-    text-align: left;
-    height: 600px;
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+@media screen and (min-width: 2000px) and (max-width: 2150px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+        margin-left: 75px;
+
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 590px;
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 85px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 90%;
+    }
+
 }
 
-.single-recipe .top-part .rating{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    margin-top: 45px;
-    margin-bottom: 45px;
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
+
+@media screen and (min-width: 1875px) and (max-width: 2000px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+        margin-left: 75px;
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 600px;
+        width: 420px;
+        height: 250px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
 }
 
-.single-recipe .informations {
-    line-height: 50px;
-    width: 800px;
-    margin: auto;
-    max-height: 400px;
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
+
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
+
+@media screen and (min-width: 1750px) and (max-width: 1875px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+        margin-left: 75px;
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 700px;
+        font-size: 300%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 150px;
+        left: 540px;
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 99.1%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+        font-size: 85%;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        height: 6.5%;
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 90%;
+    }
+
 }
 
-.single-recipe .recipeLabel {
-    font-size: 300%;
-    
-}
 
-.single-recipe .informations .recipeAuthor{
-    padding: 15px;
-}
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
 
-.single-recipe .informations .type{
-    padding: 15px;
-}
+/*@media screen and (min-width: 1500px) and (max-width: 1750px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
 
-.single-recipe .informations .mealType{
-    padding: 15px;
-}
+    }
 
-.single-recipe .informations .prepTime{
-    padding: 15px;
-}
 
-.single-recipe .informations .ingredients{
-    padding: 15px;
-}
+    .left {
+        text-align: center;
+        margin-top: 15%;
+    }
 
-.single-recipe .ingredientsDetails {
-    clear: both;
-    margin: auto;
-    text-align: left;
-}
 
-.single-recipe .main-bar {
-    width: 1400px;
-    margin-bottom: 60px;
-}
+    .left .top-part {
+        margin-bottom: 50px;
 
-.single-recipe .little-bar {
-    width: 550px;
-}
+    }
 
-.single-recipe .globalInfo {
-    clear: both;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    background-color: beige;
-    border-radius: 8px;
-}
-.single-recipe .globalInfo .column {
-    margin-right: 10px;
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        font-size: 300%;
+        text-align: left;
+        margin-left: 10%;
+        margin-bottom: 100px;
+        max-width: 450px;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        height: 200px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 25px;
+        border: 4px solid black;
+        position: absolute;
+        top: 25%;
+        left: 57%;
+    }
+
+    .right {
+        display: flex;
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        height: 15%;
+        width: 99.1%;
+        border-radius: 45px;
+        overflow: scroll;
+        font-size: 65%;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        width: 6%;
+        height: 95%;
+        margin-left: 20px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 70px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 70px;
+        margin-right: 70px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 90%;
+    }
+
+}*/
+
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
+
+/*@media screen and (min-width: 1250px) and (max-width: 1500px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: center;
+        margin-top: 15%;
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        font-size: 200%;
+        text-align: left;
+        margin-left: 10%;
+        margin-bottom: 100px;
+        max-width: 300px;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        height: 175px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 25px;
+        border: 4px solid black;
+        position: absolute;
+        top: 21%;
+        left: 57%;
+    }
+
+    .right {
+        display: flex;
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        height: 12%;
+        width: 99.1%;
+        border-radius: 45px;
+        overflow: scroll;
+        font-size: 85%;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 40px;
+        height: 90%;
+        width: 15%;
+        margin-top: 6px;
+        margin-left: 10px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin-top: 8px;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 90%;
+    }
+
 }*/
 
 
-.backButton {
-    appearance: button;
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 0 solid #e5e7eb;
-    border-radius: .5rem;
-    box-sizing: border-box;
-    color: #482307;
-    column-gap: 1rem;
-    cursor: pointer;
-    display: flex;
-    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 100%;
-    font-weight: 700;
-    line-height: 24px;
-    margin: 0;
-    outline: 2px solid transparent;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    text-transform: none;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
-  }
-  
-  .backButton:active {
-    transform: scale(0.78);
-    /* Scaling button to 0.98 to its original size */
-    box-shadow: 0px 0px 22px rgba(0.24, 0.24, 0.24, 0.24);
-    /* Lowering the shadow */
-  }
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
 
-  .backButton:hover {
-      transform: translateY(0.250rem);
-  }
-  
-  .single-recipe .column {
-    padding-left: 30px;
-    padding-right: 30px;
-    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.53);
-    clear: both;
-    margin-bottom: 50px;
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border-radius: 12px;
+@media screen and (min-width: 1500px) and (max-width: 1875px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+
+    .left {
+        text-align: left;
+        margin-left: 75px;
+    }
+
+
+    .left .top-part {
+        margin-bottom: 50px;
+        max-width: 40%;
+
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-width: 75%;
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        max-width: 500px;
+        font-size: 150%;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }
+
+    .left .top-part .recipeImg {
+        position: absolute;
+        top: 120px;
+        left: 390px;
+        width: 410px;
+        height: 250px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 50%;
+        border: 4px solid black;
+    }
+
+    .right {
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        height: 98.9%;
+        width: 25%;
+        border-radius: 45px;
+        overflow: scroll;
+        font-size: 85%;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 45px;
+        width: 91%;
+        height: 8.5%;
+        margin-top: 6px;
+        margin-left: 12px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin: 50px;
+        margin-top: 0;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 40px;
+        margin-right: 70px;
+        margin-top: 100px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 40px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 80%;
+        margin-left: 0px;
+    }
+
 }
 
-.main-bar {
-    color: black;
-}
 
-.single-recipe .globalInfo {
-    clear: both;
-    display: flex;
-    justify-content: center;
-}
+/*--------------------------------------------------------------------
+--------------------------------------------------------------------*/
 
-.testHor {
-    max-width: 750px;
-}
+@media screen and (max-width: 1500px){
+    .single-recipe {
+        color: white;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        font-size: 130%;
+        font-family: 'Rubik', sans-serif;
 
-.usrRateAndComment {
-    display: flex;
-    
-}
+    }
 
-.usrReaction p {
-    width: 100px;
-}
 
-.usrReaction .usrComment {
-    width: 500px;
-}
+    /*.left {
+        text-align: center;
+        margin-top: 20%;
+    }
 
-.usrReaction .reviewBar {
-    margin-left: 20px;
-    margin-right: 70px;
-}
 
-.column:active {
-    transform: scale(0.95);
-}
+    .left .top-part {
+        margin-bottom: 50px;
 
-.single-recipe .directionsDetails {
-    text-align: left;
+    }
+
+    .left .top-part .rating {
+        color: #fabf84;
+    }
+
+    .left .bottom-part {
+        max-height: 565px;
+        overflow: scroll;
+    }
+
+    .bottom-part::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .left .top-part .recipeLabel {
+        font-size: 200%;
+        text-align: left;
+        margin-left: 27%;
+        margin-bottom: 200px;
+        max-width: 300px;
+
+    }
+
+    .left .top-part .rating {
+        margin-top: 50px;
+    }*/
+
+    .left .top-part .recipeImg {
+        height: 275px;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 25px;
+        border: 4px solid black;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right .ingredientsDetails {
+        order: 1;
+    }
+
+    .right .informations {
+        order: 2;
+    }
+
+    .right .tab {
+        order: 4;
+    }
+
+    .right .icons-response {
+        order: 4;
+    }
+
+    .right .ratingsAndComments {
+        order: 5;
+    }
+
+   /* .right {
+        display: flex;
+        text-align: left;
+        color: #161d2e;
+        background-color: #ffffff;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        height: 12%;
+        width: 99.1%;
+        border-radius: 45px;
+        overflow: scroll;
+        font-size: 85%;
+    }
+
+    .right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right .icons-response {
+        text-align: center;
+    }
+
+    .right .tab {
+        overflow: hidden;
+        background-color: #e4e5eb;
+        border-radius: 40px;
+        height: 90%;
+        width: 200px;
+        margin-top: 6px;
+        margin-left: 10px;
+        margin-right: 6px;
+
+    }
+
+
+    .right .tab .column {
+        margin-top: 8px;
+    }
+
+    .right .tab .icons {
+        clear: both;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+    }
+
+    .right .tab .icons .column:active {
+        transform: scale(0.75);
+    }
+
+    .right .informations {
+        margin-left: 70px;
+    }
+
+
+    .right .ingredientsDetails {
+        margin-left: 70px;
+        margin-right: 70px;
+
+    }
+
+    .right .ratingsAndComments {
+        margin-left: 70px;
+        margin-right: 70px;
+    }*/
+
+    .backButton {
+        appearance: button;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #161d2e;
+        column-gap: 1rem;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 100%;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+        outline: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+    }
+
+    .backButton:hover {
+        transform: translateY(0.250rem);
+    }
+
+    .bar {
+        width: 90%;
+    }
+
 }

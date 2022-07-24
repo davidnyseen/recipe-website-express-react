@@ -64,6 +64,8 @@ const SingleRecipe = ({ recipe, goBack, fromAPI, curr_ID, reGetRecipes }) => {
         }
     }, [cartRate])
 
+    console.log(fromAPI);
+    console.log(recipe);
 
     //ADDED SINCE 08/05/22
 
@@ -122,77 +124,62 @@ const SingleRecipe = ({ recipe, goBack, fromAPI, curr_ID, reGetRecipes }) => {
 
     return (
         <div className="single-recipe">
-            <button className="backButton" onClick={goBack}>Back</button>
-            <img className="mainIMG" src={recipe.images ? (recipe.images.LARGE ? recipe.images.LARGE.url : recipe.images.REGULAR.url) : recipe.imgUrl}></img>
-            <div className="top-part">
-                <h1 className="recipeLabel">{recipe.label ? recipe.label : recipe.recipename}</h1>
-                <h2 className="rating">{fromAPI ? "" : <FaStar fontSize={25} />} {fromAPI ? "" : recipe.ratingAverage} {/*<Rating curr_ID = {recipe._id} updateRate={setRating} currentRate={rating}/>*/}</h2>
-                <div className="informations">
-                    <p className="recipeAuthor">Author: {recipe.source ? recipe.source : recipe.author}</p>
-                    <hr className="test"></hr>
-                    <p className="type">Cuisine type: {recipe.cuisineType ? recipe.cuisineType : ""}</p>
+            <div className="left">
+                <button className="backButton" onClick={goBack}>Back</button>
+                <div className="top-part">
+                    <h1 className="recipeLabel">{recipe.label ? recipe.label : recipe.recipename}</h1>
+                    <hr className="bar"></hr>
+                    <h2 className="rating">{fromAPI ? "" : <FaStar fontSize={25} color={"#fabf84"} />} {fromAPI ? "" : recipe.ratingAverage} {/*<Rating curr_ID = {recipe._id} updateRate={setRating} currentRate={rating}/>*/}</h2>
+                    <img className="recipeImg" src={recipe.images ? (recipe.images.LARGE ? recipe.images.LARGE.url : recipe.images.REGULAR.url) : recipe.imgUrl}></img>
                 </div>
-                <hr className="testHor"></hr>
-                <div className="informations">
-                    <p className="mealType">Meal type: {recipe.mealType}</p>
-                    <hr className="test"></hr>
-                    <p className="prepTime">Preparation time: {recipe.totalTime ? recipe.totalTime : recipe.preparationtime} hour</p>
-
+                <div className="bottom-part">
+                    <div className="directionsDetails">
+                        <h1 className="recDirections">Directions:</h1>
+                        {recipe.directions ? recipe.directions : ""}
+                    </div>
                 </div>
             </div>
-
-            <hr className="main-bar"></hr>
-            <div className="recipeInstructions">
+            <div className="right">
+                {fromAPI ? "" : <div className="tab">
+                    <div className="icons">
+                        {fromAPI ? "" : <div className="column" onClick={test}>
+                            <img className="logo" src={starLogo} ></img>
+                        </div>}
+                        {fromAPI ? "" : <div className="column" onClick={addToFavrite}>
+                            <img className="logo" src={favLogo}></img>
+                        </div>}
+                    </div>
+                </div>}
+                <div className="icons-response">
+                    <p>{temp ? <div>{login.user ? <Rating curr_recipe={recipe} curr_ID={recipe._id} updateRate={setRating} currentRate={rating} setDone={setTemp} confirm={setRatingDone}
+                        currentUser={login.user} currentUserID={login.id} updateCartRate={setCartRate} reGetRecipes={() => reGetRecipes()} /> : <Link to="Login">Please login</Link>}</div> : ""}</p>
+                    <p>{temp2 ? <div>{login.user ? "Saved" : <Link to="Login">Please login</Link>}</div> : ""}</p>
+                    <p>{ratingDone ? "DONE" : ""}</p>
+                </div>
+                <div className="informations">
+                    <p className="recipeAuthor">Author: {recipe.source ? recipe.source : recipe.author}</p>
+                    <p className="type">Cuisine type: {recipe.cuisineType ? recipe.cuisineType : ""}</p>
+                    <p className="mealType">Meal type: {recipe.mealType}</p>
+                    <p className="prepTime">Preparation time: {recipe.totalTime ? recipe.totalTime : recipe.preparationtime} hour</p>
+                </div>
                 <div className="ingredientsDetails">
                     <h1>Ingredients:</h1>
                     <ol>{recipe.ingredientLines ? (recipe.ingredientLines && recipe.ingredientLines.map((step, i) =>
                         (<li>{step}</li>))) : (recipe.ingredients && recipe.ingredients.map((step, i) => (<li>{step}</li>)))}</ol>
                 </div>
-                <hr></hr>
-                <div className="directionsDetails">
-                    <h1 className="recDirections">Directions:</h1>
-                    {recipe.directions ? recipe.directions : ""}
-                </div>
-            </div>
-            <hr className="main-bar"></hr>
-            <div className="globalInfo">
-                {fromAPI ? "" : <div className="column" onClick={test}>
-                    <img className="logo" src={starLogo} ></img>
-                    <p className="ingredients">Rate this recipe</p>
-
-                </div>}
-                {fromAPI ? "" : <div className="column" onClick={addToFavrite}>
-                    <img className="logo" src={favLogo}></img>
-                    <p className="favorite">Add to favorite</p>
-                </div>}
-
-            </div>
-            {/*<p>{login.user && temp ? <Rating curr_ID = {recipe._id} updateRate={setRating} currentRate={rating} setDone={setTemp} confirm={setRatingDone}/> : ""}</p>*/}
-            <p>{temp ? <div>{login.user ? <Rating curr_recipe={recipe} curr_ID={recipe._id} updateRate={setRating} currentRate={rating} setDone={setTemp} confirm={setRatingDone}
-                currentUser={login.user} currentUserID={login.id} updateCartRate={setCartRate} reGetRecipes={() => reGetRecipes()} /> : <Link to="Login">Please login</Link>}</div> : ""}</p>
-            <p>{temp2 ? <div>{login.user ? "Saved" : <Link to="Login">Please login</Link>}</div> : ""}</p>
-            <p>{ratingDone ? "DONE" : ""}</p>
-            <div className="ratingsAndComments">
-                {/*<p>{recipe.allRatings[0].name}</p>
-                <p>{recipe.allRatings[0].rate}</p>*/}
-                <h1>Reviews</h1>
-                {recipe.allRatings && recipe.allRatings.map((element, i) => (
-                    <div className="usrReaction" key={i}>
-                        <div className="usrRateAndComment">
+                {fromAPI ? "" : <div className="ratingsAndComments">
+                    {recipe.allRatings.length > 0 ? <h1>Reviews</h1> : ""}
+                    {recipe.allRatings && recipe.allRatings.map((element, i) => (
+                        <div className="usrReaction" key={i}>
                             <p className="usrName">{element.name}</p>
-                            <p className="usrRating"><FaStar fontSize={25} />{element.rate}</p>
-                            <hr className="reviewBar"></hr>
-                            <p className="usrComment">{element.comment}</p>
+                            <div className="usrRateAndComment">
+                                <p className="rateElement"><FaStar fontSize={25} />{element.rate}</p>
+                                <p className="rateElement">{element.comment}</p>
+                            </div>
+                            <hr></hr>
                         </div>
-                        <hr></hr>
-                    </div>
-                ))}
-                {/*{allRates && allRates.map((element, i) => (
-                    <div key={i}>
-                        <p>{element.name}</p>
-                        <p>{element.rate}</p>
-                    </div>
-                ))}*/}
+                    ))}
+                </div>}
             </div>
         </div>
 

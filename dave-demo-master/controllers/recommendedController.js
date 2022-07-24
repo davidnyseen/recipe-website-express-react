@@ -4,29 +4,28 @@ const Users = require('../models/User');
 
 const fetch = require('node-fetch');
 
-module.exports.getFormStatus = async (req, res) =>
-{
+module.exports.getFormStatus = async (req, res) => {
     console.log("In server, sending form status");
 
-    Users.findOne({ _id: req.body.currUsrID}, function(err, found)
-    {
-        let formStatus = found.recommendationSet;
+    try {
+        Users.findOne({ _id: req.body.currUsrID }, function (err, found) {
+            let formStatus = found.recommendationSet;
 
-        res.send(formStatus);
-    })
+            return res.send(formStatus);
+        })
+    }
+    catch (err) {
+        return res.status(400).send(err.message)
+    }
 }
 
 
-module.exports.getRecommendedRecipes = async (req, res) =>
-{
+module.exports.getRecommendedRecipes = async (req, res) => {
     //console.log("Getting recommended..." + req.body.currUsrID);
     //const favCuisine = req.body.
-    
-    Users.findOne({_id: req.body.currUsrID}, async function(err, found)
-    {
-        if(!err)
-        {
-            if(!found.usrPreferences[0].favCuisineType) return;
+
+    try {
+        Users.findOne({ _id: req.body.currUsrID }, async function (err, found) {
             console.log("SENDING BACK RECOMMENDATIONS");
             let favCuisine = found.usrPreferences[0].favCuisineType;
             console.log(favCuisine);
@@ -40,12 +39,11 @@ module.exports.getRecommendedRecipes = async (req, res) =>
             var filteredArr = tempArr.filter(item => item.cuisineType === favCuisine);
             //console.log("Filtered recipes: " + filteredArr);
 
-            for(let count=0; count <filteredArr.length; count++)//NOW WE EXCLUDE THE RECIPES WHO CONTAIN THE INGREDIENT
+            for (let count = 0; count < filteredArr.length; count++)//NOW WE EXCLUDE THE RECIPES WHO CONTAIN THE INGREDIENT
             {
                 //console.log("GET INGREDIENTS: " + filteredArr[count].ingredients);
 
-                if(filteredArr[count].ingredients.find(element => element === exclIngredient))
-                {
+                if (filteredArr[count].ingredients.find(element => element === exclIngredient)) {
                     //console.log(filteredArr[count].ingredients.find(element => element === exclIngredient));
                     filteredArr.splice(count, 1);
                     //console.log("FOUND A RECIPE WITH ONIONS");
@@ -54,36 +52,31 @@ module.exports.getRecommendedRecipes = async (req, res) =>
                 }
             }
 
-           // console.log("AFTER REMOVING INGREDIENT: " + filteredArr);
+            // console.log("AFTER REMOVING INGREDIENT: " + filteredArr);
 
-           //NOW WE FILTER THE TIME
+            //NOW WE FILTER THE TIME
 
-           if(wantedTime)
-           {
-            filteredArr = filteredArr.filter(item => item.preparationtime <= wantedTime);
-           }
+            if (wantedTime) {
+                filteredArr = filteredArr.filter(item => item.preparationtime <= wantedTime);
+            }
 
 
             //NOW ITS TIME TO PICK 3 RECIPES FROM THE ARRAY
             let size = filteredArr.length;
-            let i = 0, j=0;
-            if(size > 3)
-            {
+            let i = 0, j = 0;
+            if (size > 3) {
                 i = parseInt(Math.random() * ((size - 3) - 1) + 1);
                 j = 3;
             }
-            else if(size == 3)
-            {
-                i=0;
-                j=3;
+            else if (size == 3) {
+                i = 0;
+                j = 3;
             }
-            else if(size == 2)
-            {
+            else if (size == 2) {
                 i = 0;
                 j = 2;
             }
-            else if(size == 1)
-            {
+            else if (size == 1) {
                 i = 0;
                 j = 1;
             }
@@ -100,17 +93,16 @@ module.exports.getRecommendedRecipes = async (req, res) =>
             //returnedArr = filteredArr.slice(1, 3);
             filteredArr = filteredArr.sort(() => 0.5 - Math.random());
 
-            console.log("SLICE TEST: " + filteredArr.slice(i,i+j));
+            console.log("SLICE TEST: " + filteredArr.slice(i, i + j));
 
             //console.log("FILTERED RESULT: " + filteredArr);
-            
-            res.send(filteredArr.slice(i,i+j));
-        }
-        else
-        {
-            console.log(err);
-            res.status(500).send();
-        }
-    });
+
+            return res.send(filteredArr.slice(i, i + j));
+
+        });
+    }
+    catch (err) {
+        return res.status(400).send(err.message)
+    }
 
 }

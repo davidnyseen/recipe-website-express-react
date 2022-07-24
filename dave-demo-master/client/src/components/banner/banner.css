@@ -1,55 +1,66 @@
-
-Link{
-  color: #6d352a;
-}
-
 header {
-  border-bottom: 2px solid #6d352a;
-  /* margin-bottom: 28px; */
-  height: 100px;
-  padding: 14px 0;
+  background: linear-gradient(135deg, rgba(87,95,118,1) 0%, rgba(23,29,47,1) 100%);
+
 }
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
+  margin: auto;
+  padding: 0;
+  max-width: 85%;
+
 }
 
-nav ul {
+.container .logo {
+  margin-right: 120px;
+  color: white;
+}
+
+.main-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1.4em;
-}
-.main-nav{
-  margin-top: 14px;
-}
-.main-nav ul {
   display: flex;
-  align-items: stretch;
-  
+  margin-bottom: 10px;
+  padding:22px;
+
+
 }
-a{
-  color: #6d352a;
+
+.main-nav .current {
+  background-color: white;
+  color: #FF6347
 }
+
 .main-nav a {
-  text-decoration: none;
-  padding: 5px 20px;
+  margin-left: 60px;
   display: block;
-}
-.logo {
-    margin-top:20px;
+  color: white;
+  font-size: 20px;
 }
 
-.main-nav Link:hover{
-  color: #000000;
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 51%;
+  z-index: 1;
 }
-.usernamebanner{
-  margin-right: 100px;
 
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
 }
-.usernamebanner h2{
-  color: #6d352a;
 
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
 }

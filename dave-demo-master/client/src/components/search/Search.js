@@ -14,15 +14,16 @@ function Search() {
     }
 
     return (
-        <div className='search-form'>
-             <form className="search-form" onSubmit={handleClick} >
-                <input className="search-bar" type="text" placeholder="search for recipes..."
-                    value={searchResult}
-                    onChange={(e) => setSearchResult(e.target.value)} />
-                <button className="search-button"
-                >search</button>
+        <div className="search-box">
+            <form className="search-form" onSubmit={handleClick} >
+                <button className="btn-search"><i className="fas fa-search"></i></button>
+                <input type="text" className="input-search" placeholder="Type to Search..." value={searchResult}
+                    onChange={(e) => setSearchResult(e.target.value)}></input>
             </form>
-           
+            <div className="search-title">
+                <h1>Delicious recipes.</h1>
+                <h1>Share yours.</h1>
+            </div>
         </div>
     );
 }

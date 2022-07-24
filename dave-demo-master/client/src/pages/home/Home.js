@@ -16,6 +16,9 @@ import fetchGet from '../../utils/fetchGet';
 import fetchPost from '../../utils/fetchPost';
 import RecForm from '../../components/RecForm/RecForm.js';
 
+import Homeintro from '../home/Homeintro';
+import footer from '../../components/footer/footer.js';
+
 
 import Header1 from '../../img/Header1.jpg'
 
@@ -28,6 +31,7 @@ const Home = () => {
   const { value } = useSelector((state) => state.searchReducer);
   const [searchResult, setSearchResult] = useState("");
   const { login } = useSelector((state) => state.login);
+  console.log(login);
 
   //TEST
   const recipesUser = useSelector((state) => state.recipes); //NO SOGRAIM
@@ -43,7 +47,6 @@ const Home = () => {
     //if(!login){ // getrecipes only if login state is false.
     console.log("Dispatching");
     dispatch(getRecipes(value)); // 
-
     //}
   }, [value]);
 
@@ -63,7 +66,7 @@ const Home = () => {
     //dispatch(getRecipes(value)); // CHECK
 
   }
-  
+
   function reGetRecommended() {
     getRecommendedRecipes(login.id);
   }
@@ -143,15 +146,18 @@ const Home = () => {
         }
       })
       .then((res) => {
-        console.log(res);
-        dispatch(setRecommendedRecipes(res));
+        if (res) {
+          console.log(res);
+          dispatch(setRecommendedRecipes(res));
+        }
+
       })
       .catch((error) => {
         console.log(error)
       });
   }
 
- /* useEffect(() => {
+  useEffect(() => {
     let currUsrID;
     console.log(login);
     if (login.id) {
@@ -161,7 +167,7 @@ const Home = () => {
       const sentValue = JSON.stringify({ currUsrID });
 
 
-      fetch(process.env.REACT_APP_HEROKU_URL+'/getFormStatus', {
+      fetch('/getFormStatus', {
         method: 'post',
         credentials: 'include',
         headers: {
@@ -179,21 +185,20 @@ const Home = () => {
           }
         })
         .then((res) => {
-          console.log("Heres the form status:");
-          console.log(res);
+          console.log("Heres the form status: " + res);
           dispatch(setStatus(res));
-          console.log(recStatus.status);
+          console.log("recStatus updated: " + recStatus.status);
         })
         .catch((error) => {
           console.log(error)
         });
 
       if (recStatus.status) {
-        console.log(currUsrID);
+        console.log("Current user id " + currUsrID);
         getRecommendedRecipes(currUsrID);
       }
     }
-  }, []);*///RECOMMENDATION TEMPORARY DISABLED
+  }, []);
 
   const [recRecipePopup, setRecRecipePopup] = useState(false);
 
@@ -201,44 +206,59 @@ const Home = () => {
     <div className="container-recipes">
       <div className="all-recipes">
         <Search></Search>
-        <h1>search results for:  <p style={{ 'color': 'rgb(13, 49, 82)', 'display': 'inline' }}>{value}</p></h1>
-        <h1>RECIPES FROM USERS</h1>
-        <div className="recipe">
-          {recipesUser.recipesDb && recipesUser.recipesDb.map((recipe, i) =>
-          (
-            <HomeBody key={i} index={i}
-              image={recipe.imgUrl} label={recipe.recipename}
-              dishType="TEMP TEST" recipe={recipe}
-              handleClick={setDisplaySingle}
-              updateIndex={setIndex}
-              triggerPopup={togglePopup}
-              fromAPI={false}
-              setFromAPIPopup={setFromAPIPopup}
-              setRecRecipePopup={() => setRecRecipePopup(false)}
-            />
-          ))}
+        {value ? <div>
+          <h1>search results for:  <p style={{ 'color': 'rgb(13, 49, 82)', 'display': 'inline' }}>{value}</p></h1>
+          <h1>RECIPES FROM USERS</h1>
+          <div className="recipe">
+            {recipesUser.recipesDb && recipesUser.recipesDb.map((recipe, i) =>
+            (
+              <HomeBody key={i} index={i}
+                image={recipe.imgUrl} label={recipe.recipename}
+                dishType="TEMP TEST" recipe={recipe}
+                handleClick={setDisplaySingle}
+                updateIndex={setIndex}
+                triggerPopup={togglePopup}
+                fromAPI={false}
+                setFromAPIPopup={setFromAPIPopup}
+                setRecRecipePopup={() => setRecRecipePopup(false)}
+              />
+            ))}
+          </div>
+          <h1>RECIPES FROM EDAMAM</h1>
+          <div className="recipe">
+            {recipes ? recipes && recipes.map((recipe, i) =>
+            (
+              <HomeBody key={i} index={i}
+                image={recipe.recipe.image} label={recipe.recipe.label}
+                dishType={recipe.recipe.dishType} recipe={recipe.recipe}
+                handleClick={setDisplaySingle}
+                updateIndex={setIndex}
+                triggerPopup={togglePopup}
+                fromAPI={true}
+                setFromAPIPopup={setFromAPIPopup}
+                setRecRecipePopup={() => setRecRecipePopup(false)}
+              />
+            )) : <div className='APIServersError'><h2>"EDAMAM SERVERS ARE NOT AVAILABLE FOR NOW. PLEASE TRY LATER"</h2></div>}
+          </div>
         </div>
-        <h1>RECIPES FROM EDAMAM</h1>
-        <div className="recipe">
-          {recipes ? recipes && recipes.map((recipe, i) =>
-          (
-            <HomeBody key={i} index={i}
-              image={recipe.recipe.image} label={recipe.recipe.label}
-              dishType={recipe.recipe.dishType} recipe={recipe.recipe}
-              handleClick={setDisplaySingle}
-              updateIndex={setIndex}
-              triggerPopup={togglePopup}
-              fromAPI={true}
-              setFromAPIPopup={setFromAPIPopup}
-              setRecRecipePopup={() => setRecRecipePopup(false)}
-            />
-          )) : <div className='APIServersError'><h2>"EDAMAM SERVERS ARE NOT AVAILABLE FOR NOW. PLEASE TRY LATER"</h2></div>}
-        </div>
+        :
+        <Homeintro></Homeintro>}
+        {/*{isOpen && <Popup
+          content={<>{fromAPIPopup ?
+            <SingleRecipe recipe={recipes[currentIndex].recipe} goBack={setBack} fromAPI={true}></SingleRecipe>
+            :
+            <SingleRecipe recipe={recipesUser.recipesDb[currentIndex]} goBack={setBack} fromAPI={false}></SingleRecipe>}
+          </>}
+          handleClose={togglePopup}
+          />}*/}
 
-        {/*<h1>RECOMMENDED RECIPES</h1>
+        {/*<h1>RECOMMENDED RECIPES</h1>*/}
 
+
+        {value ?
         <div className="RecommendedRecipes">
           {login.id ?
+          <div><h1>RECOMMENDED RECIPES</h1>
             <div className="recipe">{recStatus.status ? recStatus.recommendedRecipes && recStatus.recommendedRecipes.map((recipe, i) =>
             (
               <HomeBody key={i} index={i}
@@ -253,11 +273,18 @@ const Home = () => {
               />
             )) :
               <Popup content={<><RecForm closeRecommendationForm={closeRecommendationForm} /></>}></Popup>}
-            </div> : ""}
-            </div>*/}
+            </div>
+            </div>: ""}
+        </div> : "" }
+        {/*{isOpen && <Popup
+          content={<>
+            <SingleRecipe recipe={recStatus.recommendedRecipes[currentIndex]} goBack={setBack} fromAPI={false}></SingleRecipe>
+          </>}
+          handleClose={togglePopup}
+          />}*/}
 
         {isOpen && <Popup
-          content={<>{!recRecipePopup ? <div> { fromAPIPopup ?
+          content={<>{!recRecipePopup ? <div> {fromAPIPopup ?
             <SingleRecipe recipe={recipes[currentIndex].recipe} goBack={setBack} fromAPI={true} reGetRecipes={reGetRecipes}></SingleRecipe>
             :
             <SingleRecipe recipe={recipesUser.recipesDb[currentIndex]} goBack={setBack} fromAPI={false} reGetRecipes={reGetRecipes}></SingleRecipe>}</div>
